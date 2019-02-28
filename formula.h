@@ -51,21 +51,21 @@ bool isPow2(int n);
 double CalculateGateCap(double width, Technology tech);
 
 double CalculateGateArea(
-		int gateType, int numInput,
-		double widthNMOS, double widthPMOS,
-		double heightTransistorRegion, Technology tech,
-		double *height, double *width);
+        int gateType, int numInput,
+        double widthNMOS, double widthPMOS,
+        double heightTransistorRegion, Technology tech,
+        double *height, double *width);
 
 /* calculate the capacitance of a gate */
 void CalculateGateCapacitance(
-		int gateType, int numInput,
-		double widthNMOS, double widthPMOS,
-		double heightTransistorRegion, Technology tech,
-		double *capInput, double *capOutput);
+        int gateType, int numInput,
+        double widthNMOS, double widthPMOS,
+        double heightTransistorRegion, Technology tech,
+        double *capInput, double *capOutput);
 
 double CalculateDrainCap(
-		double width, int type,
-		double heightTransistorRegion, Technology tech);
+        double width, int type,
+        double heightTransistorRegion, Technology tech);
 
 /* calculate the capacitance of a FBRAM */
 double CalculateFBRAMGateCap(double width, double thicknessFactor, Technology tech);
@@ -73,9 +73,9 @@ double CalculateFBRAMGateCap(double width, double thicknessFactor, Technology te
 double CalculateFBRAMDrainCap(double width, Technology tech);
 
 double CalculateGateLeakage(
-		int gateType, int numInput,
-		double widthNMOS, double widthPMOS,
-		double temperature, Technology tech);
+        int gateType, int numInput,
+        double widthNMOS, double widthPMOS,
+        double temperature, Technology tech);
 
 double CalculateOnResistance(double width, int type, double temperature, Technology tech);
 
@@ -84,13 +84,13 @@ double CalculateTransconductance(double width, int type, Technology tech);
 double horowitz(double tr, double beta, double rampInput, double *rampOutput);
 
 double CalculateWireResistance(
-		double resistivity, double wireWidth, double wireThickness,
-		double barrierThickness, double dishingThickness, double alphaScatter);
+        double resistivity, double wireWidth, double wireThickness,
+        double barrierThickness, double dishingThickness, double alphaScatter);
 
 double CalculateWireCapacitance(
-		double permittivity, double wireWidth, double wireThickness, double wireSpacing,
-		double ildThickness, double millarValue, double horizontalDielectric,
-		double verticalDielectic, double fringeCap);
+        double permittivity, double wireWidth, double wireThickness, double wireSpacing,
+        double ildThickness, double millarValue, double horizontalDielectric,
+        double verticalDielectic, double fringeCap);
 
 
 #endif /* FORMULA_H_ */

@@ -31,18 +31,18 @@ dbg: DBG += -ggdb -g
 dbg: $(target)
 
 $(target) : $(OBJ)
-	$(CXX) $(LDFLAGS) $^ $(LDLIBS) -o $@
+    $(CXX) $(LDFLAGS) $^ $(LDLIBS) -o $@
 
 clean :
-	$(RM) $(target) $(dep_file) $(OBJ)
+    $(RM) $(target) $(dep_file) $(OBJ)
 
 .cpp.o :
-	$(CXX) $(CXXFLAGS) $(DBG) $(INC) -c $< -o $@
+    $(CXX) $(CXXFLAGS) $(DBG) $(INC) -c $< -o $@
 
 depend $(DEP):
-	@echo Makefile - creating dependencies for: $(SRC)
-	@$(RM) $(DEP)
-	@$(CXX) -E -MM $(INC) $(SRC) >> $(DEP)
+    @echo Makefile - creating dependencies for: $(SRC)
+    @$(RM) $(DEP)
+    @$(CXX) -E -MM $(INC) $(SRC) >> $(DEP)
 
 ifeq (,$(findstring clean,$(MAKECMDGOALS)))
 -include $(DEP)
